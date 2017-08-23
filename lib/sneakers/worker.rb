@@ -35,6 +35,7 @@ module Sneakers
     def ack!; :ack end
     def reject!; :reject; end
     def requeue!; :requeue; end
+    def error!; :error; end
 
     def publish(msg, opts)
       to_queue = opts.delete(:to_queue)
